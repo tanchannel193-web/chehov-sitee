@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Artifact';
+    src: url('../fonts/Artifact.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Beware';
+    src: url('../fonts/Beware.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bim';
+    src: url('../fonts/Bim.otf') format('opentype');
+}

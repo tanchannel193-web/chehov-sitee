@@ -1,0 +1,342 @@
+:root {
+    /* Цвета */
+    --color-bg: #E4D2AC;
+    --color-text: #442D1C;
+    --color-accent: #743014;
+
+    /* Шрифты */
+    --font-accent: 'Beware', serif;
+    --font-heading: 'Bim', serif;
+    --font-text: 'Artifact', system-ui, sans-serif;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    font-size: 18px;
+}
+
+.header {
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.nav-left {
+    
+    padding-left: 100px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width:77%;
+           
+}
+
+.nav-left a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-left a:hover {
+    color: var(--color-accent);
+}
+
+.header .underlined {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+
+.hero{
+    min-height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 270px 150px 100px 100px;
+}
+
+.hero-title{
+    font-size:135px;
+    font-weight:400;
+    color:var(--color-accent);
+    width:50%;
+    font-family: var(--font-accent);
+}
+
+.hero-text{
+    width:50%;
+    font-size:20px;
+    color:var(--color-text);
+}
+
+.divider{
+    border-top:1px solid #8e7d70;
+    margin-bottom:40px;
+}
+
+.story{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+    padding-bottom:60px;
+}
+
+.story-info{
+    width:35%;
+    padding-top:20px;
+    padding-left: 100px;
+}
+
+.story-info h2{
+    font-family: var(--font-accent);
+    font-size:40px;
+    line-height:1;
+    margin-bottom:25px;
+    font-weight:500;
+    color:var(--color-accent);
+}
+
+strong {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.story-info p{
+    margin-top: 15px;
+    margin-bottom:15px;
+    font-size: 16px;
+}
+
+.story-image{
+    width:65%;
+}
+
+.story-image img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+    filter:sepia(40%);
+}
+
+.quote-item{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:55px;
+}
+
+.line{
+    width:8px;
+    background:var(--color-text);
+    margin-top:6px;
+}
+
+.story-info strong {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.story-info .line {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: var(--color-accent);
+}
+
+.quote-item p{
+    margin:0;
+    font-size:16px;
+    color:var(--color-text);
+    max-width:900px;
+}
+
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.footer {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    padding: 60px 100px; /* Большие отступы для десктопа */
+    margin-top: 80px;
+    font-size: 16px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #8e7d70; /* Приглушенный цвет для заголовков в подвале */
+    margin: 0;
+}
+
+/* Сетка для почтовых адресов */
+.footer-emails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* На десктопе в два ряда */
+    gap: 10px 30px;
+}
+
+.footer a {
+    color: var(--color-bg);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    opacity: 0.85;
+}
+
+.footer-phone {
+    font-family: var(--font-heading);
+    font-size: 22px; /* Выделяем телефон крупнее */
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; 
+    }
+
+    
+    .nav-left {
+        padding-left: 20px; 
+        padding-right: 20px;
+        padding-top: 25px;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .nav-left a {
+        white-space: normal;
+        font-size: 18px;
+    }
+
+   
+    .hero {
+        min-height: auto;
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 40px 20px; 
+    }
+
+    .hero-title {
+        font-size: 80px !important;
+        width: 100%;
+        margin-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        width: 100%; 
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    
+    .story {
+        flex-direction: column; 
+        gap: 25px; 
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .story-info {
+        width: 100%; 
+        padding-left: 0; 
+        padding-top: 0;
+    }
+
+    .story-info h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .story-info br {
+        display: none;
+    }
+
+    .story-image {
+        width: 100%; 
+    }
+
+    .story-image img {
+        filter: sepia(20%); 
+    }
+
+    .divider {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        padding: 40px 20px; 
+        margin-top: 50px;
+    }
+
+    .footer-container {
+        flex-direction: column; 
+        gap: 35px;
+        text-align: left;
+    }
+
+    .footer-emails {
+        grid-template-columns: 1fr; 
+        gap: 12px;
+    }
+    
+    .footer-phone {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 70px !important;
+    }
+    
+    .story-info h2 {
+        font-size: 28px;
+    }
+}
